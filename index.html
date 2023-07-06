@@ -12,6 +12,19 @@
         }
         #text {
             border: 1px black solid;
+            border-radius: 10px;
+            padding: 5px;
+            width: 300px;
+            height: 160px;
+        }
+        #text > p {
+            margin: 3px;
+            height: 21px;
+        }
+        #enhance {
+            width: 280px;
+            height: 40px;
+            margin: 10px;
         }
     </style>
 </head>
@@ -34,9 +47,11 @@
     </p>
     <div id="text">
         <p>1 -> 2</p>
-        <p>성공 : 90</p>
-        <p>실패 : 90</p>
-        <p>파괴 : 90</p>
+        <p>성공 : 95.0%</p>
+        <p>실패 : 5.0%</p>
+        <p></p>
+        <p></p>
+        <p>강화비용 : 136,000</p>
     </div>
 
     <button id="enhance" onclick="enhance('weapon')">강화</button>

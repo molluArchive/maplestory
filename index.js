@@ -95,6 +95,7 @@ const enhance = (item) => {
             }
         }
         console.log(message)
+        makeText(user.item.weapon.star)
     } else {
         console.log("돈 부족")
     }
@@ -104,3 +105,17 @@ const changeValue = (id, number = 1) => {
     document.getElementById(id).value = (Number(document.getElementById(id).value) + number).toLocaleString()
 }
 
+
+const textDiv = document.getElementById('text')
+const makeText = (star) => {
+    let percentage = data.starforce.percentage[star]
+    textDiv.children[0].textContent = `${star} -> ${star+1}`
+    textDiv.children[1].textContent = `성공 : ${(percentage[0] * 100).toFixed(1)}%`
+    textDiv.children[2].textContent = `실패 : ${((1-percentage[0]-percentage[1])*100).toFixed(1)}%`
+    if(percentage[1] > 0){
+        textDiv.children[3].textContent = `파괴 : ${(percentage[1] * 100).toFixed(1)}%`
+    } else {
+        textDiv.children[3].textContent = ""
+    }
+    textDiv.children[5].textContent = `강화비용 : ${price_calc(user.item.weapon.level,star).toLocaleString()}`
+}
