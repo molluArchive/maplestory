@@ -4,14 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>스타포스</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+        }
+        #text {
+            border: 1px black solid;
+        }
+    </style>
 </head>
 <body>
     <p id="level"></p>
     <p id="exp"></p>
     <p id="money"></p>
 
-    <button id="enhance" onclick="enhance('weapon')">ㅁㄱㄱㅎ</button>
+    <p>
+        <label>시행횟수</label>
+        <input id="test1" type="text" disabled="false" value=0>
+    </p>
+    <p>
+        <label>사용금액</label>
+        <input id="test2" type="text" disabled="false" value=0>
+    </p>
+    <p>
+        <label>파괴횟수</label>
+        <input id="test3" type="text" disabled="false" value=0>
+    </p>
+    <div id="text">
+        <p>1 -> 2</p>
+        <p>성공 : 90</p>
+        <p>실패 : 90</p>
+        <p>파괴 : 90</p>
+    </div>
+
+    <button id="enhance" onclick="enhance('weapon')">강화</button>
 </body>
 <script src="./index.js"></script>
 </html>
